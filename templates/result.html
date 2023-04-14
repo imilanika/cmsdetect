@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CMS Detection Result</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      p {
+        color: #666;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .error {
+        color: red;
+      }
+      .cms {
+        font-weight: bold;
+      }
+      .result {
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        border: 2px solid #333;
+        padding: 10px 20px;
+        display: inline-block;
+        margin-top: 20px;
+      }
+      a:hover {
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result">
+      <h1>CMS Detection Result {{ title }}</h1>
+      <p>{{meta_description}}</p>	
+      <p>{{meta_keywords}}</p>	
+
+      {% if error %}
+        <p class="error">{{ error }}</p>
+      {% else %}
+        <p>The detected Meta CMS is: <span class="cms">{{ cms }}</span></p>
+        <p> {{ found_cms }}</p>
+        <p> {{ found_soc }}</p>
+	<p>{{ found_soc|safe }}</p>
+      {% endif %}
+      <a href="/">Check another domain</a>
+    </div>
+  </body>
+</html>
+
