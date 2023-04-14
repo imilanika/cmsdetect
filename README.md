@@ -7,7 +7,7 @@ This is a simple Flask web application that analyzes a given website and provide
 --- Usage
 Clone the repository to your local machine.
 
-git clone https://github.com/your_username/website-analyzer.git
+git clone https://github.com/imilanika/cmsdetect.git
 
 Install the required Python packages.
 
